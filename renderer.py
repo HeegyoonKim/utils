@@ -80,7 +80,7 @@ class Renderer(object):
         composite = background_subsection * (1-alpha_mask) + mesh_color * alpha_mask
         img[:H, :W] = composite
         
-        for i in range(len(vertices_list)):
+        for i in range(len(mesh_nodes)):
             self.scene.remove_node(mesh_nodes[i])
         self.scene.remove_node(cam_node)
         
